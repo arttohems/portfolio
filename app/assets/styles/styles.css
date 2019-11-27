@@ -1,0 +1,15 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #777;
+  background-color: #fff;
+}
+
+index[type="*"],
+select[options] {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
