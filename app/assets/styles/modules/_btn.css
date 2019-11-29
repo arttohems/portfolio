@@ -1,0 +1,7 @@
+.btn {
+  background-color: $madBlue;
+  color: white;
+  text-decoration: none;
+  padding: 1.2rem;
+  display: inline-block;
+}

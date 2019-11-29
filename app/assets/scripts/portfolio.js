@@ -84,10 +84,8 @@ max: 12
 {
 count: 2,
 pricing: [3.85,3.40,2.55,1.70,1.00,0.85,0.80,0.75,0.75,0.65,0.55],
-set_up: 70.00,
-min: 13,
-max: 24
-},
+set_up: 70.00
+}
 {
 count: 3,
 pricing: [4.10,3.60,2.70,1.80,1.20,0.90,0.85,0.80,0.80,0.70,0.60],
@@ -161,9 +159,74 @@ max: 1000000000
 ]
 */
 
+/* Object Sizes
+
+var tierUnits= [{
+tier: 1,
+min: 1,
+max: 12
+},
+{
+tier: 2,
+min: 13,
+max: 24
+},
+{
+tier: 3,
+min: 25,
+max: 48
+},
+{
+tier: 4,
+min: 49,
+max: 72
+},
+{
+tier: 5,
+min: 73,
+max: 144
+},
+{
+tier: 6,
+min: 145,
+max: 288
+},
+{
+tier: 7,
+min: 289,
+max: 600
+},
+{
+tier: 8,
+min: 601,
+max: 1200
+},
+{
+tier: 9,
+min: 1201,
+max: 2400
+},
+{
+tier: 10,
+min: 2401,
+max: 5000
+},
+{
+tier: 11,
+min: 5001,
+max: 10000
+},
+{
+tier: 12,
+min: 10001,
+max: 1000000000
+}
+]
+*/
+
 function makeSizeFields(sizeInfo) {
   return `
-<fieldset id="${sizeInfo.fieldset}" class="fieldset">
+<div id="${sizeInfo.fieldset}" class="fieldset">
                 <form class="form-wrapper" oninput="total_${sizeInfo.size}.value=parseFloat(price_${sizeInfo.size}.value*size_${sizeInfo.id}.value).toFixed(2)">
                 <div class="size-wrapper">
                 <label class="la-size" for="input size_${sizeInfo.id}"> ${sizeInfo.size} </label>
@@ -178,7 +241,7 @@ function makeSizeFields(sizeInfo) {
                 <output class="in-total" id="total_${sizeInfo.size}">0</output>
                 </div>
                 </form>
-</fieldset>
+</div>
     `;
 }
 
@@ -192,9 +255,9 @@ function makeSizeFields(sizeInfo) {
 </datalist>
 */
 
-document.querySelector("#sizeFields").innerHTML = `
-${sizeInfo.map(makeSizeFields).join("")}
-`;
+document.querySelector("#size-fields").innerHTML = `${sizeInfo
+  .map(makeSizeFields)
+  .join("")}`;
 
 function calcTotalUnits() {
   var sf = (function() {
@@ -250,3 +313,31 @@ var tierValue = (function() {
     ? 10
     : 0);
 })();
+/*
+var productValue = (function() {
+  var priceUnit = 'size_' + `${sizeInfo.id}`;
+  return (tierValue === 0
+    ? priceUnit * 2
+    : tierValue === 1
+    ? priceUnit * 1.9
+    : tierValue === 2
+    ? priceUnit * 1.8
+    : tierValue === 3
+    ? priceUnit * 1.7
+    : tierValue === 4
+    ? priceUnit * 1.6
+    : tierValue === 5
+    ? priceUnit * 1.5
+    : tierValue === 6
+    ? priceUnit * 1.4
+    : tierValue === 7
+    ? priceUnit * 1.3
+    : atierValue === 8
+    ? priceUnit * 1.25
+    : tierValue === 9
+    ? priceUnit * 1.2
+    : tierValue === 10
+    ? priceUnit * 1.1
+    : priceUnit * 2);
+})();
+*/

@@ -1,15 +1,7 @@
-body {
-  font-family: "Poppins", sans-serif;
-  color: #777;
-  background-color: #fff;
-}
-
-index[type="*"],
-select[options] {
-  font-family: "Poppins", sans-serif;
-}
-
-img {
-    max-width: 100%;
-    margin: 0 auto;
-}
+@import "normalize.css";
+@import "base/_global";
+@import "base/_vars";
+@import "modules/_header";
+@import "modules/_hero-grid";
+@import "modules/_hero-text";
+@import "modules/_btn";

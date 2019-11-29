@@ -1,0 +1,30 @@
+
+.hero-text {
+
+  &__title {
+    font-weight: 300;
+    font-size: 5vw;
+    color:white;
+    line-height: 0;
+  }
+
+  &__subtitle {
+    font-weight: 100;
+    font-size: 2vw;
+color: #ffffff90;
+  line-height: 0;
+  }
+
+  &__p {
+    font-weight: 100;
+    font-size: 1vw;
+    line-height: 0;
+  }
+
+  &__p-wrap {
+color: #00000090;
+  font-style: italic ;
+  font-size: 1.2vw;
+  }
+
+}

@@ -1,0 +1,33 @@
+header {
+  color: #aaa;
+  width: 100%;
+  margin: 0 auto;
+}
+nav {
+  display: inline-flex;
+}
+
+.nav {
+  &__links {
+    text-decoration: none;
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px 10px;
+    color: $madBlue;
+  
+
+  &-img {
+    width: 200px;
+    padding: 0;
+    margin: 5px 10px;
+  }
+
+  &-ul {
+    display: inline-flex;
+    list-style-type: none;
+  }
+
+  &-li {
+    width: 100%;
+  }
+}}

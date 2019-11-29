@@ -9,36 +9,88 @@
     </head>
     <body>
         <header>
-        </header>
-            <nav class="navbar">
+            <nav>
+                <div class="nav__links-img">
                 <a class="logo" href="#">
-                    <picture>
-                        <img id="header-logo" src="assets/images/mad_skittles_BANNER.png" alt="Mad Skittles Logo" />
-                    </picture>
+                        <img id="header-logo" src="assets/images/logo.png" alt="Mad Skittles Logo" />
                 </a>
-                <a class="nav-link" id="navI1" href="https://www.quora.com/profile/adam-hopper-6" target="_blank">about</a>
-                <a class="nav-link" id="navI2" href="https://brandedmerch.io" target="_blank">services</a>
-                <a class="nav-link" id="navI3" href="https://art-hems.com" target="_blank">portfolio</a>
-                <a class="nav-link" id="navI4" href="mailto:adam@art-hems.com">contact</a>
-        </nav>
+                </div>
+                <ul class="nav__links-ul">
+                    <li class="nav__links-li">
+                        <a class="nav__links" href="https://www.quora.com/profile/adam-hopper-6" target="_blank">about</a>
+                    </li>
+                    <li class="nav__links-li">
+                        <a class="nav__links" href="https://brandedmerch.io" target="_blank">services</a>
+                    </li>
+                    <li class="nav__links-li">
+                        <a class="nav__links" href="https://art-hems.com" target="_blank">portfolio</a>
+                    </li>
+                    <li class="nav__links-li">
+                        <a class="nav__links" href="mailto:adam@art-hems.com">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="hero-grid">
+            <div id="hero-grid__left" class="hero-grid__container">
+            <img src="assets/images/new_LEFT_01.png"/>
+            <div class="hero-grid__container-overlay">
+            <h1 class="hero-text__title">
+                Web Dev
+            </h1>
+            <h2 class="hero-text__subtitle">
+                HTML | CSS | JS | PHP | SQL
+            </h2>
+        </div>
+            </div>
+            <div id="hero-grid__top-left" class="hero-grid__container">
+            <img src="assets/images/TOP_LEFT_02.png"/>
+            <div class="hero-grid__container-overlay">
+            <h1 class="hero-text-overlay__title">
+                Web Development
+            </h1>
+            <h2 class="hero-text-overlay__subtitle">
+                HTML | CSS | JS | PHP | SQL
+            </h2>
+            <p class="hero-text-overlay__p">
+                building your tangible imaginations
+            </p>
+        </div>
+            </div>
+
+        
+            <img id="hero-grid__top-right" src="assets/images/TOP_RIGHT_03.png"/>
+            
+            <img id="hero-grid__center" src="assets/images/CENTER.png"/>
+            
+            <img id="hero-grid__bottom-left" src="assets/images/BOTTOM_LEFT_04.png"/>
+            
+            <img id="hero-grid__bottom-right" src="assets/images/BOTTOM_RIGHT_05.png"/>
+            
+        </section>
+        <section id="hero-grid-mobile">
+            <img id="hero-grid__mobile-top" src="assets/images/MOBILE_TOP_01.png"/>
+            <img id="hero-grid__mobile-middle" src="assets/images/MOBILE_MIDDLE_02.png"/>
+            <img id="hero-grid__mobile-bottom" src="assets/images/MOBILE_BOTTOM_03.png"/>
+        </section>
        <main>
            <aside>
                <p class="sizeHead">SIZE</p>
                <p class="unitHead">UNIT COST</p>
                <p class="costHead">SIZE TOTAL</p>
-               <div id="sizeFields"></div>
-               <fieldset>
+               <div id="size-fields"></div>
+               
                    <div class="input-label-set">
                    <label class="la-alltotals" for="allUnits"> TOTAL UNIT </label>
                    <input id="allUnits" class="in-alltotals" name="allUnits" value="" />
                    </div>
-                </fieldset>
-                <fieldset>
+                
+                
                     <div class="input-label-set">
                     <label class="la-allPrice" for="input in-allPrice">TOTAL PRODUCT PRICE </label>
                     <input id="allPrice" class="in-allPrice" name="allPrice" value=""/>
                 </div>
-            </fieldset>
+            
         </aside>
     </main>
     <footer>
