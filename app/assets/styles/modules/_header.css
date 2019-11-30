@@ -1,20 +1,24 @@
 header {
-  color: #aaa;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 80px; 
+
 }
 nav {
   display: inline-flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #ffffff;
 }
 
 .nav {
   &__links {
     text-decoration: none;
-    width: 100%;
-    margin: 10px auto;
     padding: 15px 10px;
     color: $madBlue;
-  
+
 
   &-img {
     width: 200px;
@@ -23,11 +27,15 @@ nav {
   }
 
   &-ul {
-    display: inline-flex;
+display: table;
     list-style-type: none;
+    padding: 15px 10px;
   }
 
   &-li {
-    width: 100%;
+    display: table-cell;
+padding: 0 10px;
+margin: 0 auto;
+font-weight: 100
   }
 }}

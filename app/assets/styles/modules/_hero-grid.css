@@ -11,7 +11,7 @@
 
   #hero-grid{
   &__top-left {
-    grid-column: 3 / span 2;
+    grid-column: 3;
     grid-row: 1 / span 2;
   }
 
@@ -20,12 +20,21 @@
     grid-row: 1;
   }
 
-  &__center {
+  &__center-bottom {
     grid-column: 4;
     grid-row: 2;
-    z-index: 999;
+    background-color:$madBlue;
   }
 
+  &__center-bottom:hover {
+  opacity: 0.5;
+  }
+
+
+  &__center-top {
+    grid-column: 4;
+    grid-row: 1;
+  }
   &__bottom-left {
     grid-column: 3 / span 2;
     grid-row: 3;

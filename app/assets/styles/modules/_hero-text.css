@@ -9,11 +9,15 @@
   }
 
   &__subtitle {
-    font-weight: 100;
-    font-size: 2vw;
-color: #ffffff90;
+  font-weight: 100;
+  font-size: 2vw;
+  color: #ffffff90;
   line-height: 0;
   }
+
+
+
+
 
   &__p {
     font-weight: 100;
