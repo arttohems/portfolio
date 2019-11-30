@@ -1,23 +1,25 @@
-
 .hero-text {
-
   &__title {
     font-weight: 300;
-    font-size: 5vw;
-    color:white;
+    color: white;
     line-height: 0;
+    font-size: 5rem;
+
+    @mixin atTablet {
+      font-size: 5vw;
+    }
   }
 
   &__subtitle {
-  font-weight: 100;
-  font-size: 2vw;
-  color: #ffffff90;
-  line-height: 0;
+    font-weight: 100;
+    font-size: 1.75rem;
+    color: #ffffff90;
+    line-height: 0;
+
+    @mixin atTablet {
+      font-size: 2vw;
+    }
   }
-
-
-
-
 
   &__p {
     font-weight: 100;
@@ -26,9 +28,8 @@
   }
 
   &__p-wrap {
-color: #00000090;
-  font-style: italic ;
-  font-size: 1.2vw;
+    color: #00000090;
+    font-style: italic;
+    font-size: 1.2vw;
   }
-
 }

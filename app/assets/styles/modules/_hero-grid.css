@@ -1,77 +1,84 @@
 #hero-grid {
   display: grid;
-  grid-template-columns: repeat(6, 16.6666%);
-  grid-template-rows: 33% 33% 33% 1%;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
   grid-gap: 0;
-}
- #hero-grid__left {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 3;
+
+  @mixin atTablet {
+    display: grid;
+    grid-template-columns: repeat(6, 16.6666%);
+    grid-template-rows: 33% 33% 33% 1%;
+    grid-gap: 0;
   }
 
-  #hero-grid{
+  &__left {
+    grid-column: 1;
+    grid-row: 1;
+
+    @mixin atTablet {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 3;
+    }
+  }
+
   &__top-left {
-    grid-column: 3;
-    grid-row: 1 / span 2;
+    display: none;
+    @mixin atTablet {
+      display: grid;
+      grid-column: 3;
+      grid-row: 1 / span 2;
+    }
   }
 
   &__top-right {
-    grid-column: 5 / span 2;
-    grid-row: 1;
+    grid-column: 1;
+    grid-row: 3;
+    @mixin atTablet {
+      display: grid;
+      grid-column: 5 / span 2;
+      grid-row: 1;
+    }
   }
 
   &__center-bottom {
-    grid-column: 4;
-    grid-row: 2;
-    background-color:$madBlue;
+    display: none;
+    @mixin atTablet {
+      display: grid;
+      grid-column: 4;
+      grid-row: 2;
+      background-color: $madBlue;
+    }
   }
-
-  &__center-bottom:hover {
-  opacity: 0.5;
-  }
-
 
   &__center-top {
     grid-column: 4;
     grid-row: 1;
   }
+
   &__bottom-left {
-    grid-column: 3 / span 2;
-    grid-row: 3;
+    grid-column: 1;
+    grid-row: 2;
+
+    @mixin atTablet {
+      grid-column: 3 / span 2;
+      grid-row: 3;
+      background-color: $madBlue;
+    }
   }
 
   &__bottom-right {
     grid-column: 5 / span 2;
     grid-row: 2 / span 2;
   }
-  &-mobile {
-    display: none;
-  }
 }
 
 .hero-grid__container {
-    position: relative;
-}
-.hero-grid__container-overlay {
-  position: absolute;
-  top: 65%;
-  left: 3%;
-  transform: translate(0, 0);
-}
+  position: relative;
 
-
-@media screen and (max-width: 600px) {
-  #hero-grid {
-    display: none;
-  }
-  #hero-grid-mobile {
-    display: grid;
-    margin: 0;
-    padding: 0;
-  }
-
-  #hero-grid__mobile-middle {
-    margin: 0;
-    padding: 0;
+  &-overlay {
+    position: absolute;
+    top: 65%;
+    left: 3%;
+    transform: translate(0, 0);
   }
 }

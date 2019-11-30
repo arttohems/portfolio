@@ -1,0 +1,11 @@
+@define-mixin atTablet {
+  @media (min-width: 800px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atDesktop {
+  @media (min-width: 1280px) {
+    @mixin-content;
+  }
+}
