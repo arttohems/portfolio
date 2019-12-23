@@ -1,5 +1,11 @@
+@define-mixin atCell {
+  @media (max-width: 640px) {
+    @mixin-content;
+  }
+}
+
 @define-mixin atTablet {
-  @media (min-width: 800px) {
+  @media (min-width: 641px) {
     @mixin-content;
   }
 }
@@ -7,5 +13,13 @@
 @define-mixin atDesktop {
   @media (min-width: 1280px) {
     @mixin-content;
+  }
+}
+
+@define-mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
   }
 }

@@ -1,0 +1,12 @@
+.footer {
+  position: relative;
+  text-align: center;
+  background-color: white;
+  font-size: 2vw;
+  
+  &__container {
+    position: absolute;
+    top: 90%;
+    max-height: 60px;
+  }
+}

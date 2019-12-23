@@ -3,8 +3,7 @@ body {
   color: #777;
   background-color: #fff;
 }
-
-index[type="*"],
+z index[type="*"],
 select[options] {
   font-family: "Poppins", sans-serif;
 }

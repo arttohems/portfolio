@@ -3,9 +3,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Adam Hopper | Text Created Code Portfolio</title>
-        <meta name="description" content="HTML,CSS,JS,Portfolio,Adam Hopper,Front End Develper">
+        <meta name="description" content="HTML,CSS,JS,Portfolio,Adam Hopper,Front End Developer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link href="assets/fonts/_madskittles/madskittles.css" rel="stylesheet">
+                <link href="assets/fonts/_inter/inter.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -29,56 +30,23 @@
                 </ul>
             </nav>
         </header>
-        <section id="hero-grid">
-            <div id="hero-grid__left" class="hero-grid__container">
-            <img src="assets/images/new_LEFT_01.png"/>
-            <div class="hero-grid__container-overlay">
-            <h1 class="hero-text__title">
-                Web Dev
-            </h1>
-            <h2 class="hero-text__subtitle">
-                HTML | CSS | JS | PHP | SQL
-            </h2>
-        </div>
-            </div>
-
-            <img id="hero-grid__top-left"  src="assets/images/TOP_LEFT_02.png"/>
-
-            <img id="hero-grid__top-right" src="assets/images/TOP_RIGHT_03.png"/>
-            
-            <img id="hero-grid__bottom-left" src="assets/images/BOTTOM_LEFT_04.png"/>
-            
-            <img id="hero-grid__bottom-right" src="assets/images/BOTTOM_RIGHT_05.png"/>
-            
-            <img id="hero-grid__center-bottom" src="assets/images/CENTER_BOTTOM_06.png"/>
-
-            <img id="hero-grid__center-top" src="assets/images/CENTER_TOP_07.png"/>
-            
+        <section class="hero">
+            <picture class="hero__image"/>
+                <source srcset="assets/images/mobile_400.png" media="(max-width:640px)">
+                <source srcset="assets/images/tablet_320.png" media="(max-width:1240px)">
+                <img src="assets/images/desktop_640.png"/>                        
+            </picture>
+            <h1 class="hero__title">Web Design & Development</h1>
+            <h2 class="hero__subtitle">HTML | CSS | JS | PHP | MYSQL</h2>
         </section>
-       <main>
-           <aside>
-               <p class="sizeHead">SIZE</p>
-               <p class="unitHead">UNIT COST</p>
-               <p class="costHead">SIZE TOTAL</p>
-               <div id="size-fields"></div>
-               
-                   <div class="input-label-set">
-                   <label class="la-alltotals" for="allUnits"> TOTAL UNIT </label>
-                   <input id="allUnits" class="in-alltotals" name="allUnits" value="" />
-                   </div>
-                
-                
-                    <div class="input-label-set">
-                    <label class="la-allPrice" for="input in-allPrice">TOTAL PRODUCT PRICE </label>
-                    <input id="allPrice" class="in-allPrice" name="allPrice" value=""/>
-                </div>
-            
-        </aside>
+        <main>
+ 
     </main>
-    <footer>
-
+    <footer class="footer wrapper__full-width">
+        <div class="footer__container">
+    Coded by Adam Hopper | © 2020 | All Rights Reserved.
+    </div>
 </footer>
-<script src="assets/scripts/portfolio.js"></script>
 <script src="bundled.js"></script>
 </body>
 </html>

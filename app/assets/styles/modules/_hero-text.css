@@ -1,23 +1,31 @@
 .hero-text {
   &__title {
+    @mixin atCell {
     font-weight: 300;
+    font-size: 4rem;
     color: white;
     line-height: 0;
-    font-size: 5rem;
-
+    letter-spacing: -5px;
+    }
+   
+   
     @mixin atTablet {
       font-size: 5vw;
+    color: white;
+    line-height: 0;
     }
   }
 
   &__subtitle {
-    font-weight: 100;
+        @mixin atCell {
+    font-weight: 200;
     font-size: 1.75rem;
     color: #ffffff90;
     line-height: 0;
-
+  }
     @mixin atTablet {
       font-size: 2vw;
+      color: #ffffff;
     }
   }
 

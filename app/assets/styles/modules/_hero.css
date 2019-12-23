@@ -1,0 +1,84 @@
+.hero {
+  background-color: $madLightBlue;
+  position: relative;
+  display: grid;
+
+  @mixin atCell {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-gap: 0;
+  }
+
+  @mixin atTablet {
+    background: linear-gradient(to bottom, #ffffff00, $madCustomText);
+    grid-template-columns: 33% 67%;
+    grid-template-rows: 49% 2% 49%;
+    grid-gap: 0;
+  }
+
+  &__title {
+    font-family: "madskittles-regular";
+
+    @mixin atCell {
+      font-size: 10vw;
+      position: absolute;
+      top: 8%;
+      right: 0;
+      text-align: right;
+      color: #ffffff;
+      grid-column: 1 / span 2;
+      background-color: $madCustomText;
+      width: 67%;
+      line-height: 9.8vw;
+      padding: 2rem -0.4vw;
+      letter-spacing: -0.2rem;
+    }
+
+    @mixin atTablet {
+      position: absolute;
+      top: 8%;
+      right: 7%;
+      grid-column: 2;
+      grid-row: 1;
+      text-align: right;
+      font-size: 2vw;
+      line-height: 7.8vw;
+      letter-spacing: -0.7rem;
+    }
+  }
+
+  &__subtitle {
+    @mixin atCell {
+      display: none;
+    }
+
+    @mixin atTablet {
+      font-family: "inter";
+      font-weight: 700;
+      letter-spacing: -0.1rem;
+      position: absolute;
+      top: 4%;
+      right: 7%;
+      grid-column: 2;
+      grid-row: 3;
+      text-align: right;
+      font-size: 2.8vw;
+      color: white;
+      z-index: 9999;
+    }
+  }
+
+  &__image {
+    @mixin atCell {
+      grid-column: 1;
+      grid-row: 1;
+      opacity: 0.9;
+    }
+
+    @mixin atTablet {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+  }
+}
