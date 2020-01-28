@@ -3,6 +3,7 @@ body {
   color: #777;
   background-color: #fff;
 }
+
 z index[type="*"],
 select[options] {
   font-family: "Poppins", sans-serif;
@@ -11,4 +12,10 @@ select[options] {
 img {
   max-width: 100%;
   margin: 0 auto;
+}
+
+main {
+  background: $madCustomText;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
 }

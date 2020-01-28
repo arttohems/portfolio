@@ -1,84 +1,53 @@
 .hero {
+  padding: 3vw 0;
   background-color: $madLightBlue;
   position: relative;
   display: grid;
-
-  @mixin atCell {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-gap: 0;
-  }
-
-  @mixin atTablet {
-    background: linear-gradient(to bottom, #ffffff00, $madCustomText);
-    grid-template-columns: 33% 67%;
-    grid-template-rows: 49% 2% 49%;
-    grid-gap: 0;
+  grid-gap: 0;
+ grid-template-columns: 33.33% 66.66%;
+  
+  @mixin atCell{
+  grid-template-columns: 50% 50%;
   }
 
   &__title {
-    font-family: "madskittles-regular";
-
-    @mixin atCell {
-      font-size: 10vw;
-      position: absolute;
-      top: 8%;
-      right: 0;
-      text-align: right;
-      color: #ffffff;
-      grid-column: 1 / span 2;
-      background-color: $madCustomText;
-      width: 67%;
-      line-height: 9.8vw;
-      padding: 2rem -0.4vw;
-      letter-spacing: -0.2rem;
-    }
-
-    @mixin atTablet {
-      position: absolute;
-      top: 8%;
-      right: 7%;
-      grid-column: 2;
-      grid-row: 1;
-      text-align: right;
-      font-size: 2vw;
-      line-height: 7.8vw;
-      letter-spacing: -0.7rem;
-    }
+    position: absolute;
+    display: table;
+    font-family: "madskittles-bold";
+    color: white;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    z-index: 99;
+    text-align: right;
+    background-color: $madCustomText;
+    padding: 6vw 4vw;
+   
+    @mixin atCell{
+      display:none;
   }
 
-  &__subtitle {
-    @mixin atCell {
-      display: none;
-    }
-
     @mixin atTablet {
-      font-family: "inter";
-      font-weight: 700;
-      letter-spacing: -0.1rem;
-      position: absolute;
-      top: 4%;
-      right: 7%;
-      grid-column: 2;
-      grid-row: 3;
-      text-align: right;
-      font-size: 2.8vw;
-      color: white;
-      z-index: 9999;
-    }
+    top:10%;
+    font-size: 10vw;
+    line-height: 6vw;
   }
-
-  &__image {
-    @mixin atCell {
-      grid-column: 1;
-      grid-row: 1;
-      opacity: 0.9;
-    }
-
+}
+  &__title__mobile {
+        @mixin atCell {
+    position: absolute;
+    display: table;
+    font-family: "madskittles-bold";
+    color: white;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    z-index: 99;
+    text-align: right;
+    background-color: $madCustomText;
+    padding: 2vw 4vw;
+    font-size: 20vw;
+  }
     @mixin atTablet {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-    }
+     display:none;
+  }
   }
 }

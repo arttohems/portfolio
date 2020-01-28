@@ -1,6 +1,6 @@
 @import "normalize.css";
-@import "base/_global";
 @import "base/_vars";
+@import "base/_global";
 @import "base/_mixins";
 @import "modules/_header";
 @import "modules/_hero";
@@ -8,3 +8,4 @@
 @import "modules/_wrapper";
 @import "modules/_grid";
 @import "modules/_footer";
+

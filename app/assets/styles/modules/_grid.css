@@ -2,26 +2,22 @@
   display: grid;
 
   @mixin atCell {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: 50% 50%;
   }
 
   @mixin atTablet {
     grid-template-columns: repeat(12, 8.3333%);
+  }
 
-    &__col-3-left {
+    &__col-l {
       grid-column: 1 / span 4;
     }
 
-    &__col-3-center {
-      grid-column: 5 / span 4;
+    &__col-c {
+      grid-column: 5 / span 8;
     }
 
-    &__col-3-right {
-      grid-column: 9 / span 4;
-    }
-
-    &__col-9-right {
-      grid-column: 4 / span 8;
+    &__col-r {
+      grid-column: 9 / span 12;
     }
   }
-}
